@@ -8,11 +8,12 @@
 
 import UIKit
 
-class PhotoDetailsViewController: UIViewController {
+class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
 
     var photoName : String?
     var photoImage: UIImage?
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var photoImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,10 @@ class PhotoDetailsViewController: UIViewController {
             self.photoImageView.alpha = 1.0
         }
         
+        scrollView.minimumZoomScale = 1;
+        scrollView.maximumZoomScale = 6.0;
+        scrollView.contentSize = photoImageView.frame.size;
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +37,13 @@ class PhotoDetailsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return photoImageView
+    }
+    
+    
 
+    
     /*
     // MARK: - Navigation
 

@@ -107,20 +107,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-Ic-swf">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-Jl-c6G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wpq-Ic-swf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Wpq-Ic-swf" secondAttribute="bottom" id="6Ms-cN-SpL"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wpq-Ic-swf" secondAttribute="trailing" id="9Kd-Ar-hLo"/>
+                                    <constraint firstItem="Wpq-Ic-swf" firstAttribute="leading" secondItem="9ff-Jl-c6G" secondAttribute="leading" id="NJf-2D-cLU"/>
+                                    <constraint firstItem="Wpq-Ic-swf" firstAttribute="top" secondItem="9ff-Jl-c6G" secondAttribute="top" id="nTu-qb-2gj"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="dU8-gc-SXx" id="OBR-pz-1m0"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wpq-Ic-swf" secondAttribute="trailing" id="FHi-VU-rlf"/>
-                            <constraint firstItem="Wpq-Ic-swf" firstAttribute="top" secondItem="EOe-pk-mBI" secondAttribute="bottom" id="Muq-G3-94M"/>
-                            <constraint firstItem="Wpq-Ic-swf" firstAttribute="leading" secondItem="o0M-4Y-jsg" secondAttribute="leading" id="rwt-6A-Ws0"/>
-                            <constraint firstItem="JmX-EW-Pbm" firstAttribute="top" secondItem="Wpq-Ic-swf" secondAttribute="bottom" id="zWU-5P-HxD"/>
+                            <constraint firstItem="9ff-Jl-c6G" firstAttribute="leading" secondItem="o0M-4Y-jsg" secondAttribute="leading" id="9aJ-iH-cCT"/>
+                            <constraint firstItem="9ff-Jl-c6G" firstAttribute="top" secondItem="o0M-4Y-jsg" secondAttribute="top" id="Aee-vT-Zhv"/>
+                            <constraint firstItem="Wpq-Ic-swf" firstAttribute="width" secondItem="o0M-4Y-jsg" secondAttribute="width" id="Dkg-Xr-XSK"/>
+                            <constraint firstAttribute="bottom" secondItem="9ff-Jl-c6G" secondAttribute="bottom" id="Kwl-rH-baM"/>
+                            <constraint firstItem="Wpq-Ic-swf" firstAttribute="height" secondItem="o0M-4Y-jsg" secondAttribute="height" id="YOF-BT-Diw"/>
+                            <constraint firstAttribute="trailing" secondItem="9ff-Jl-c6G" secondAttribute="trailing" id="jYq-qc-Gpe"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="photoImageView" destination="Wpq-Ic-swf" id="LrI-98-HPO"/>
+                        <outlet property="scrollView" destination="9ff-Jl-c6G" id="Zt0-dZ-HTV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ei-KF-1JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
