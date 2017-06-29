@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E71D422C1F03741400FA3607 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D422B1F03741400FA3607 /* AppDelegate.swift */; };
-		E71D422E1F03741400FA3607 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D422D1F03741400FA3607 /* ViewController.swift */; };
 		E71D42311F03741400FA3607 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71D422F1F03741400FA3607 /* Main.storyboard */; };
 		E71D42341F03741400FA3607 /* Photos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E71D42321F03741400FA3607 /* Photos.xcdatamodeld */; };
 		E71D42361F03741400FA3607 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71D42351F03741400FA3607 /* Assets.xcassets */; };
 		E71D42391F03741400FA3607 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71D42371F03741400FA3607 /* LaunchScreen.storyboard */; };
 		E71D42441F03741400FA3607 /* PhotosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42431F03741400FA3607 /* PhotosTests.swift */; };
 		E71D424F1F03741400FA3607 /* PhotosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D424E1F03741400FA3607 /* PhotosUITests.swift */; };
+		E71D425D1F049E4500FA3607 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D425C1F049E4500FA3607 /* PhotosViewController.swift */; };
+		E71D425F1F049F1A00FA3607 /* PhotosList.plist in Resources */ = {isa = PBXBuildFile; fileRef = E71D425E1F049F1A00FA3607 /* PhotosList.plist */; };
+		E71D42621F04A09300FA3607 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42611F04A09300FA3607 /* Photo.swift */; };
+		E71D42651F04A41A00FA3607 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,6 @@
 /* Begin PBXFileReference section */
 		E71D42281F03741400FA3607 /* Photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71D422B1F03741400FA3607 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E71D422D1F03741400FA3607 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E71D42301F03741400FA3607 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E71D42331F03741400FA3607 /* Photos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photos.xcdatamodel; sourceTree = "<group>"; };
 		E71D42351F03741400FA3607 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		E71D424A1F03741400FA3607 /* PhotosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E71D424E1F03741400FA3607 /* PhotosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUITests.swift; sourceTree = "<group>"; };
 		E71D42501F03741400FA3607 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E71D425C1F049E4500FA3607 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		E71D425E1F049F1A00FA3607 /* PhotosList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PhotosList.plist; sourceTree = "<group>"; };
+		E71D42611F04A09300FA3607 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,16 @@
 		E71D422A1F03741400FA3607 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				E71D42601F04A06300FA3607 /* Model */,
 				E71D422B1F03741400FA3607 /* AppDelegate.swift */,
-				E71D422D1F03741400FA3607 /* ViewController.swift */,
 				E71D422F1F03741400FA3607 /* Main.storyboard */,
 				E71D42351F03741400FA3607 /* Assets.xcassets */,
 				E71D42371F03741400FA3607 /* LaunchScreen.storyboard */,
 				E71D423A1F03741400FA3607 /* Info.plist */,
 				E71D42321F03741400FA3607 /* Photos.xcdatamodeld */,
+				E71D42631F04A3EF00FA3607 /* Views */,
+				E71D425C1F049E4500FA3607 /* PhotosViewController.swift */,
+				E71D425E1F049F1A00FA3607 /* PhotosList.plist */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
@@ -126,6 +135,22 @@
 				E71D42501F03741400FA3607 /* Info.plist */,
 			);
 			path = PhotosUITests;
+			sourceTree = "<group>";
+		};
+		E71D42601F04A06300FA3607 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E71D42611F04A09300FA3607 /* Photo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E71D42631F04A3EF00FA3607 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +266,7 @@
 				E71D42391F03741400FA3607 /* LaunchScreen.storyboard in Resources */,
 				E71D42361F03741400FA3607 /* Assets.xcassets in Resources */,
 				E71D42311F03741400FA3607 /* Main.storyboard in Resources */,
+				E71D425F1F049F1A00FA3607 /* PhotosList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E71D42651F04A41A00FA3607 /* PhotosTableViewCell.swift in Sources */,
+				E71D42621F04A09300FA3607 /* Photo.swift in Sources */,
 				E71D42341F03741400FA3607 /* Photos.xcdatamodeld in Sources */,
-				E71D422E1F03741400FA3607 /* ViewController.swift in Sources */,
+				E71D425D1F049E4500FA3607 /* PhotosViewController.swift in Sources */,
 				E71D422C1F03741400FA3607 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +548,7 @@
 				E71D42551F03741400FA3607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E71D42561F03741400FA3607 /* Build configuration list for PBXNativeTarget "PhotosTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +557,7 @@
 				E71D42581F03741400FA3607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E71D42591F03741400FA3607 /* Build configuration list for PBXNativeTarget "PhotosUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +566,7 @@
 				E71D425B1F03741400FA3607 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
