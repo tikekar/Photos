@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AFNetworking
+//import SDWebImage
+
 
 class PhotosTableViewCell: UITableViewCell {
 
@@ -17,7 +20,10 @@ class PhotosTableViewCell: UITableViewCell {
     var photoDictionary: Dictionary<String, String>? {
         didSet {
             photoNameLabel.text = photoDictionary?["photoName"]
-            
+            if let imageUrl = photoDictionary?["photoUrl"] {
+                photoImageView.setImageWith(URL(string: imageUrl)!)
+                //photoImageView.sd_setImage(with: URL(string: imageUrl)!)
+            }
         }
     }
     

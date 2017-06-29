@@ -20,7 +20,7 @@ class Photo: NSObject {
     }
     
     class func fetchImages() -> [Photo]? {
-        var photos: [Photo]?
+        var photos: [Photo] = []
         var myDict: NSDictionary?
         if let path = Bundle.main.path(forResource: "PhotosList", ofType: "plist") {
             myDict = NSDictionary(contentsOfFile: path)
@@ -28,7 +28,7 @@ class Photo: NSObject {
         
         if myDict != nil {
             for (key, value) in myDict! {
-                photos?.append(Photo(aPhotoName: key as! String, aPhotoUrl: value as! String))
+                photos.append(Photo(aPhotoName: key as! String, aPhotoUrl: value as! String))
             }
         }
         return photos

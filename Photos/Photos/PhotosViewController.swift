@@ -10,11 +10,11 @@ import UIKit
 
 class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var photos : [Photo]?
+    var photos : [Photo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        photos = Photo.fetchImages()
+        photos = Photo.fetchImages()!
        
     }
 
@@ -29,13 +29,13 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: - TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return (photos?.count)!
+        return photos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:
             "PhotoCell") as! PhotosTableViewCell
-        
+        cell.photoDictionary = ["photoName" : (photos[indexPath.row].photoName)!, "photoUrl" : (photos[indexPath.row].photoUrl)!]
         
         return cell
     }

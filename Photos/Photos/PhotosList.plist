@@ -3,8 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>Flower Mug</key>
-	<string>https://photos.google.com/share/AF1QipNa9fkNynzC5ZPCKvHb2jjDCuW1ve4w5XDLE-gcK6HFSESwLlO9TS5hoCvvhtHBAA/photo/AF1QipNe2nmM89WT9TOVfLB8g7lUnspPSqEqPPkN5PVD?key=X0tULV9MbVBlWFlWNHJKYjFXcUdMdWlMRFRWeXdn</string>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2916.jpg</string>
+	<key>Pink Roses</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3921.jpg</string>
 	<key>Red Roses</key>
-	<string>https://photos.google.com/share/AF1QipNa9fkNynzC5ZPCKvHb2jjDCuW1ve4w5XDLE-gcK6HFSESwLlO9TS5hoCvvhtHBAA/photo/AF1QipPVU4BAvbi6LW-7Y4RYz5zX176_wRLenpM5Kft4?key=X0tULV9MbVBlWFlWNHJKYjFXcUdMdWlMRFRWeXdn</string>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_20130519_134517.jpg</string>
 </dict>
 </plist>
