@@ -2,11 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Red Roses</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_20130519_134517.jpg</string>
 	<key>Flower Mug</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2916.jpg</string>
 	<key>Pink Roses</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3921.jpg</string>
-	<key>Red Roses</key>
-	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_20130519_134517.jpg</string>
+	<key>Flower Drawing</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1190.jpg</string>
+	<key>Beautiful Painting</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3486.JPG</string>
+	<key>Hamlet</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3407.JPG</string>
+	<key>Birthday Cake</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2863.jpg</string>
 </dict>
 </plist>
