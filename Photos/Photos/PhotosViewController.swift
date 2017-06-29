@@ -8,14 +8,33 @@
 
 import UIKit
 
-class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     var photos : [Photo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        photos = Photo.fetchImages()!
-       
+        tableView.keyboardDismissMode =  UIScrollViewKeyboardDismissMode.onDrag
+        loadPhotos()
+    }
+    
+    func loadPhotos() {
+        if (searchBar.text?.isEmpty)! {
+            photos = Photo.fetchImages()!
+        }
+        else {
+            var i = 0
+            while i < photos.count {
+                if !photos[i].photoName.contains(searchBar.text!) {
+                    photos.remove(at: i)
+                }
+                else {
+                    i = i + 1
+                }
+            }
+        }
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +57,20 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.photoDictionary = ["photoName" : (photos[indexPath.row].photoName)!, "photoUrl" : (photos[indexPath.row].photoUrl)!]
         
         return cell
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        loadPhotos()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        loadPhotos()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        loadPhotos()
+        
     }
 
     
