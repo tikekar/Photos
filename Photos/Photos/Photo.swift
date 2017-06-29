@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Model class for the photo
 class Photo: NSObject {
     
     var photoName: String!
@@ -19,6 +20,7 @@ class Photo: NSObject {
         
     }
     
+    // Class method to fetch images from the plist
     class func fetchImages() -> [Photo]? {
         var photos: [Photo] = []
         var myDict: NSDictionary?

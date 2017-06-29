@@ -20,12 +20,14 @@ class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         navigationItem.title = photoName
         
+        // Fade to normal effect for the image
         photoImageView.alpha = 0.1
         photoImageView.image = photoImage
         UIView.animate(withDuration: 0.6) {
             self.photoImageView.alpha = 1.0
         }
         
+        //Add image zooming
         scrollView.minimumZoomScale = 1;
         scrollView.maximumZoomScale = 6.0;
         scrollView.contentSize = photoImageView.frame.size;
