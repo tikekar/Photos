@@ -18,7 +18,12 @@ class PhotoDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = photoName
+        
+        photoImageView.alpha = 0.1
         photoImageView.image = photoImage
+        UIView.animate(withDuration: 0.6) {
+            self.photoImageView.alpha = 1.0
+        }
         
     }
 
