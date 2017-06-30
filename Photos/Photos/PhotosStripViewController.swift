@@ -20,7 +20,8 @@ class PhotosStripViewController: UIViewController, UICollectionViewDelegate, UIC
 
     }
     
-    // Check the searchbar text and load photos accordingly.
+    // Show similar photos strip on the details page. 
+    // Eg if image is Red Flowers, then all the images which have red or flowers will show up in the similar list below
     func loadSimilarPhotos() {
         if let allPhotos = Photo.fetchImages() {
             filteredPhotos.removeAll()
@@ -45,7 +46,6 @@ class PhotosStripViewController: UIViewController, UICollectionViewDelegate, UIC
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -60,21 +60,24 @@ class PhotosStripViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotosStripCell", for: indexPath) as! PhotosStripCollectionViewCell
+        cell.photoName = filteredPhotos[indexPath.row].photoName!
         cell.photoImageView.downloadImage(url: filteredPhotos[indexPath.row].photoUrl!)
         return cell
     }
     
 
     
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "Show Photo Details" {
+            let destinationViewController = segue.destination as! PhotoDetailsViewController
+            let cell = sender as! PhotosStripCollectionViewCell
+            destinationViewController.photoName = cell.photoName
+            destinationViewController.photoImage = cell.photoImageView.image
+        }
     }
-    */
+    
 
 }

@@ -10,5 +10,6 @@ import UIKit
 
 class PhotosStripCollectionViewCell: UICollectionViewCell {
     
+    var photoName: String! = ""
     @IBOutlet weak var photoImageView: UIImageView!
 }
