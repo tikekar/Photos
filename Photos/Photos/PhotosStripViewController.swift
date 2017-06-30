@@ -54,7 +54,28 @@ class PhotosStripViewController: UIViewController, UICollectionViewDelegate, UIC
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filteredPhotos.count
+        if filteredPhotos.count > 0 {
+            
+            collectionView.backgroundView = nil
+            
+            return filteredPhotos.count
+        }
+        else {
+            let rect = CGRect(x: 0,
+                              y: 0,
+                              width: collectionView.bounds.size.width,
+                              height: collectionView.bounds.size.height)
+            let noDataLabel: UILabel = UILabel(frame: rect)
+            noDataLabel.text = "Similar photos not found"
+            noDataLabel.textAlignment = .center
+            noDataLabel.textColor = UIColor.gray
+            noDataLabel.sizeToFit()
+            
+            collectionView.backgroundView = noDataLabel
+            
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

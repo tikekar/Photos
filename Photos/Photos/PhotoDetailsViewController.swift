@@ -26,7 +26,8 @@ class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         allowZooming()
         
-        showPhotosStrip()
+        photosStripView.frame = CGRect(x: 0, y: view.frame.height - 20, width: view.frame.width, height: photosStripView.frame.height)
+        perform(#selector(showPhotosStrip), with: nil, afterDelay: 1)
     }
     
     // Show photo with fade animation
@@ -47,7 +48,7 @@ class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func showPhotosStrip() {
-        photosStripView.frame = CGRect(x: 0, y: view.frame.height - 20, width: view.frame.width, height: photosStripView.frame.height)
+        
         UIView.animate(withDuration: 0.6) {
             self.photosStripView.frame = CGRect(x: 0, y: self.view.frame.height - self.photosStripView.frame.height, width: self.view.frame.width, height: self.photosStripView.frame.height)
         }
