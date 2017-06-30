@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216.8" y="690.40479760119945"/>
+            <point key="canvasLocation" x="1028" y="691"/>
         </scene>
         <!--Photo Details View Controller-->
         <scene sceneID="zVv-UD-Yx2">
@@ -125,6 +125,28 @@
                                     <outlet property="delegate" destination="dU8-gc-SXx" id="OBR-pz-1m0"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NzO-Mt-DkE">
+                                <rect key="frame" x="0.0" y="538" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcc-Sx-mqr">
+                                        <rect key="frame" x="0.0" y="23" width="375" height="105"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <segue destination="BsD-cA-aAI" kind="embed" identifier="Show Photos Strip" id="54c-Zx-1JO"/>
+                                        </connections>
+                                    </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFx-j4-090">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="..."/>
+                                        <connections>
+                                            <action selector="onPhotosStripButtonClick:" destination="dU8-gc-SXx" eventType="touchUpInside" id="04Y-sF-dbz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,12 +160,81 @@
                     </view>
                     <connections>
                         <outlet property="photoImageView" destination="Wpq-Ic-swf" id="LrI-98-HPO"/>
+                        <outlet property="photosStripView" destination="NzO-Mt-DkE" id="Neh-pJ-2sV"/>
                         <outlet property="scrollView" destination="9ff-Jl-c6G" id="Zt0-dZ-HTV"/>
+                        <outlet property="stripContainerView" destination="gcc-Sx-mqr" id="HnU-ac-MrN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ei-KF-1JK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1893.5999999999999" y="686.80659670164926"/>
+        </scene>
+        <!--Photos Strip View Controller-->
+        <scene sceneID="aZF-zf-UDM">
+            <objects>
+                <viewController id="BsD-cA-aAI" customClass="PhotosStripViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="csp-Qu-cYl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zvV-GP-UIE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PPS-yc-rjU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NaP-bR-J7V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LQA-65-Ufs">
+                                    <size key="itemSize" width="97" height="98"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotosStripCell" id="v1J-np-T4y" customClass="PhotosStripCollectionViewCell" customModule="Photos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="3.5" width="97" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="97" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-5L-56t">
+                                                    <rect key="frame" x="0.0" y="0.0" width="97" height="98"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tDR-5L-56t" secondAttribute="trailing" id="IpY-bT-h3X"/>
+                                            <constraint firstItem="tDR-5L-56t" firstAttribute="top" secondItem="v1J-np-T4y" secondAttribute="top" id="JuM-Tl-4s2"/>
+                                            <constraint firstItem="tDR-5L-56t" firstAttribute="leading" secondItem="v1J-np-T4y" secondAttribute="leading" id="exL-aE-rgn"/>
+                                            <constraint firstAttribute="bottom" secondItem="tDR-5L-56t" secondAttribute="bottom" id="ib1-h9-r3a"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="tDR-5L-56t" id="eD3-Kw-gNF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BsD-cA-aAI" id="a5q-iR-cMK"/>
+                                    <outlet property="delegate" destination="BsD-cA-aAI" id="jG4-hB-Xgh"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NaP-bR-J7V" secondAttribute="trailing" id="Dth-k3-Wfq"/>
+                            <constraint firstItem="NaP-bR-J7V" firstAttribute="leading" secondItem="PPS-yc-rjU" secondAttribute="leading" id="Uur-A0-Emn"/>
+                            <constraint firstItem="zvV-GP-UIE" firstAttribute="top" secondItem="NaP-bR-J7V" secondAttribute="bottom" id="mtA-vw-7zc"/>
+                            <constraint firstItem="NaP-bR-J7V" firstAttribute="top" secondItem="csp-Qu-cYl" secondAttribute="bottom" id="r0Q-FG-neD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="NaP-bR-J7V" id="MLK-bF-q6W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad0-ap-BCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2668" y="685.45727136431788"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zBQ-Mj-I22">
