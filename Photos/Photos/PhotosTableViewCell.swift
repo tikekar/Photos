@@ -20,7 +20,8 @@ class PhotosTableViewCell: UITableViewCell {
         didSet {
             photoNameLabel.text = photoDictionary?["photoName"]
             if let imageUrl = photoDictionary?["photoUrl"] {
-                photoImageView.setImageWith(URL(string: imageUrl)!)
+                //photoImageView.setImageWith(URL(string: imageUrl)!)
+                photoImageView.downloadImage(url: imageUrl)
             }
         }
     }

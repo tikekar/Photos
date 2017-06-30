@@ -21,6 +21,7 @@
 		E71D42621F04A09300FA3607 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42611F04A09300FA3607 /* Photo.swift */; };
 		E71D42651F04A41A00FA3607 /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */; };
 		E71D42671F04B42400FA3607 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42661F04B42400FA3607 /* PhotoDetailsViewController.swift */; };
+		E71D426A1F05B85E00FA3607 /* ImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71D42691F05B85E00FA3607 /* ImageViewExtension.swift */; };
 		F1C80E0CB50D8EC015F8DED7 /* Pods_Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82FBD8D01EC72A70EB9D035 /* Pods_Photos.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		E71D42611F04A09300FA3607 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		E71D42661F04B42400FA3607 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		E71D42691F05B85E00FA3607 /* ImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewExtension.swift; sourceTree = "<group>"; };
 		EAD4369C00F672240DE984B2 /* Pods-PhotosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotosUITests/Pods-PhotosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FBF7C50756E45F9190D22C37 /* Pods_PhotosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 		E71D422A1F03741400FA3607 /* Photos */ = {
 			isa = PBXGroup;
 			children = (
+				E71D42681F05B83500FA3607 /* utilities */,
 				E71D42601F04A06300FA3607 /* Model */,
 				E71D422B1F03741400FA3607 /* AppDelegate.swift */,
 				E71D422F1F03741400FA3607 /* Main.storyboard */,
@@ -194,6 +197,14 @@
 				E71D42641F04A41A00FA3607 /* PhotosTableViewCell.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		E71D42681F05B83500FA3607 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E71D42691F05B85E00FA3607 /* ImageViewExtension.swift */,
+			);
+			name = utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +497,7 @@
 				E71D42671F04B42400FA3607 /* PhotoDetailsViewController.swift in Sources */,
 				E71D42341F03741400FA3607 /* Photos.xcdatamodeld in Sources */,
 				E71D425D1F049E4500FA3607 /* PhotosViewController.swift in Sources */,
+				E71D426A1F05B85E00FA3607 /* ImageViewExtension.swift in Sources */,
 				E71D422C1F03741400FA3607 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
