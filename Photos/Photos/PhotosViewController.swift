@@ -20,6 +20,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         setUpURLCache()
         
         tableView.keyboardDismissMode =  UIScrollViewKeyboardDismissMode.onDrag
+        
         allPhotos = Photo.fetchImages()!
         loadPhotos()
         

@@ -9,9 +9,7 @@
 import UIKit
 import AFNetworking
 
-
 class PhotosTableViewCell: UITableViewCell {
-
    
     @IBOutlet weak var photoNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!

@@ -26,6 +26,7 @@ class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
         
         allowZooming()
         
+        // TODO: Use constraints.
         photosStripView.frame = CGRect(x: 0, y: view.frame.height - 20, width: view.frame.width, height: photosStripView.frame.height)
         perform(#selector(showPhotosStrip), with: nil, afterDelay: 1)
     }
@@ -72,17 +73,12 @@ class PhotoDetailsViewController: UIViewController, UIScrollViewDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return photoImageView
     }
-    
-    
-
-    
-    
+ 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
