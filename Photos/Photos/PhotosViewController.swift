@@ -38,6 +38,13 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
         tableView.reloadData()
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+        super.viewWillDisappear(animated)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
