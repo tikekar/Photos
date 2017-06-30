@@ -153,14 +153,14 @@
 				E71D42601F04A06300FA3607 /* Model */,
 				E71D422B1F03741400FA3607 /* AppDelegate.swift */,
 				E71D422F1F03741400FA3607 /* Main.storyboard */,
+				E71D42631F04A3EF00FA3607 /* Views */,
+				E71D425C1F049E4500FA3607 /* PhotosViewController.swift */,
+				E71D42661F04B42400FA3607 /* PhotoDetailsViewController.swift */,
 				E71D42351F03741400FA3607 /* Assets.xcassets */,
 				E71D42371F03741400FA3607 /* LaunchScreen.storyboard */,
 				E71D423A1F03741400FA3607 /* Info.plist */,
-				E71D42321F03741400FA3607 /* Photos.xcdatamodeld */,
-				E71D42631F04A3EF00FA3607 /* Views */,
-				E71D425C1F049E4500FA3607 /* PhotosViewController.swift */,
 				E71D425E1F049F1A00FA3607 /* PhotosList.plist */,
-				E71D42661F04B42400FA3607 /* PhotoDetailsViewController.swift */,
+				E71D42321F03741400FA3607 /* Photos.xcdatamodeld */,
 			);
 			path = Photos;
 			sourceTree = "<group>";
