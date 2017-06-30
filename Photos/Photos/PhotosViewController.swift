@@ -16,10 +16,22 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var filteredPhotos : [Photo] = [] //Copy the photos from allPhotos here as per the searchtext
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpURLCache()
+        
         tableView.keyboardDismissMode =  UIScrollViewKeyboardDismissMode.onDrag
         allPhotos = Photo.fetchImages()!
         loadPhotos()
         
+    }
+    
+    // Setting up the URLCache with higher memory and disk capacity for smoother image loading and caching
+    // As my image size is pretty large, I need to do this.
+    func setUpURLCache() {
+        let memoryCapacity = 500 * 1024 * 1024
+        let diskCapacity = 500 * 1024 * 1024
+        let urlCache = URLCache.init(memoryCapacity: memoryCapacity, diskCapacity: diskCapacity, diskPath: "MyURLCache")
+        URLCache.shared = urlCache
     }
     
     // Check the searchbar text and load photos accordingly.
@@ -63,6 +75,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:
             "PhotoCell") as! PhotosTableViewCell
+        cell.resetCellUI()
         cell.photoDictionary = ["photoName" : (filteredPhotos[indexPath.row].photoName)!, "photoUrl" : (filteredPhotos[indexPath.row].photoUrl)!]
         
         return cell

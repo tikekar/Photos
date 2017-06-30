@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Photos-->
+        <!--Photos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="Photos" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +85,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="My Photos" id="T5n-7h-os8"/>
+                    <navigationItem key="navigationItem" title="Photos" id="T5n-7h-os8"/>
                     <connections>
                         <outlet property="searchBar" destination="c0x-Z4-QFF" id="iRW-zF-csu"/>
                         <outlet property="tableView" destination="3Pq-QV-m73" id="P9p-yR-Ksv"/>

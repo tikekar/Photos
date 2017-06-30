@@ -8,7 +8,7 @@
 
 import UIKit
 
-let imageCache = NSCache<AnyObject, AnyObject>()
+// Setting up the URLCache in the ViewController with higher memory and disk capacity
 extension UIImageView {
     
     func getDataFromUrl(url:String, completion: @escaping ((_ data: NSData?) -> Void)) {
@@ -16,25 +16,13 @@ extension UIImageView {
             
             completion(NSData(data: data!))
             }.resume()
-        /*URLSession.shared.downloadTask(with: URL.init(string: url)!) { (aURL: URL?, urlResponse: URLResponse?, error: Error?) in
-            if let data = try? Data(contentsOf: aURL!){
-                completion(NSData(data: data))
-            }
-            }.resume()*/
     }
     
     func downloadImage(url:String){
-        // check for cache
-        if let cachedImage = imageCache.object(forKey: url as AnyObject) as? UIImage {
-            self.image = cachedImage
-            return
-        }
         getDataFromUrl(url: url) { data in
             DispatchQueue.main.async() {
-                //self.contentMode = UIViewContentMode.scaleAspectFill
                 
                 self.image = UIImage(data: data! as Data)
-                imageCache.setObject(self.image!, forKey: url as AnyObject)
             }
         }
     }

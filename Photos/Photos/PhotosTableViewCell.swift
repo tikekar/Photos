@@ -16,18 +16,27 @@ class PhotosTableViewCell: UITableViewCell {
     @IBOutlet weak var photoNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     
+    func resetCellUI() {
+        photoNameLabel.text = nil
+        photoImageView.image = nil
+    }
+    
     var photoDictionary: Dictionary<String, String>? {
         didSet {
             photoNameLabel.text = photoDictionary?["photoName"]
             if let imageUrl = photoDictionary?["photoUrl"] {
+                
+                // Using AFNetworking
                 //photoImageView.setImageWith(URL(string: imageUrl)!)
-                photoImageView.downloadImage(url: imageUrl)
-            }
+                
+                // Using my own implementation of UIImageView extension (ImageViewExtension)
+                photoImageView.downloadImage(url: imageUrl)             }
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        photoImageView.layer.cornerRadius = 3
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
