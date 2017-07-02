@@ -2,31 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>incorrect url</key>
-	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_18594.jpg</string>
+	<key>Yummy Cake</key>
+	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_20130903_194244.jpg</string>
 	<key>Switzerland paradise</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1859.jpg</string>
 	<key>Behind the waterfall</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1872.jpg</string>
-	<key>Countryside Sheep</key>
+	<key>Countryside Village Sheep</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1873.jpg</string>
 	<key>Waterfall</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1978.jpg</string>
 	<key>Ice Sculpture</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2007.jpg</string>
-	<key>Snowy Jungfrou</key>
+	<key>Snowy Jungfrou Switzerland</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2017.jpg</string>
 	<key>Big White Flower</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2519.jpg</string>
 	<key>Backyard Flower Roses</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3902.jpg</string>
-	<key>Girl Painting</key>
+	<key>Girl Painting Paris</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3477.JPG</string>
-	<key>George Seurat</key>
+	<key>George Seurat Painting</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3428.jpg</string>
 	<key>Two Girls Painting</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3372.JPG</string>
-	<key>Musee De Orsey</key>
+	<key>Musee De Orsey Sculpture</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3360.JPG</string>
 	<key>Swans Swimming</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2318.jpg</string>
@@ -42,7 +42,7 @@
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_1190.jpg</string>
 	<key>Beautiful Painting</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3486.JPG</string>
-	<key>Hamlet</key>
+	<key>Hamlet Village</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_3407.JPG</string>
 	<key>Birthday Cake</key>
 	<string>https://storage.googleapis.com/photos-test/ImageFetcher/IMG_2863.jpg</string>

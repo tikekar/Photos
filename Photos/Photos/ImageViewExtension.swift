@@ -15,6 +15,7 @@ extension UIImageView {
         if url.isEmpty {
             return
         }
+        
         URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
             
             if data == nil {
