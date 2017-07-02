@@ -25,10 +25,14 @@ class PhotosTableViewCell: UITableViewCell {
             if let imageUrl = photoDictionary?["photoUrl"] {
                 
                 // Using AFNetworking
-                //photoImageView.setImageWith(URL(string: imageUrl)!)
+                if imageUrl.isEmpty {
+                    return
+                }
+                photoImageView.setImageWith(URL(string: imageUrl)!)
                 
                 // Using my own implementation of UIImageView extension (ImageViewExtension)
-                photoImageView.downloadImage(url: imageUrl)             }
+                //photoImageView.downloadImage(url: imageUrl)
+            }
         }
     }
     

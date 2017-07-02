@@ -8,12 +8,18 @@
 
 import UIKit
 
-// Setting up the URLCache in the ViewController with higher memory and disk capacity
+// Set up the URLCache in the ViewController with higher memory and disk capacity
 extension UIImageView {
     
     func getDataFromUrl(url:String, completion: @escaping ((_ data: NSData?) -> Void)) {
+        if url.isEmpty {
+            return
+        }
         URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
             
+            if data == nil {
+                return
+            }
             completion(NSData(data: data!))
             }.resume()
     }
