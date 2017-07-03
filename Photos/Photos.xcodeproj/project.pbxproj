@@ -290,7 +290,6 @@
 				TargetAttributes = {
 					E71D42271F03741400FA3607 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = GQAPG2Q6U6;
 						ProvisioningStyle = Automatic;
 					};
 					E71D423E1F03741400FA3607 = {
@@ -661,7 +660,7 @@
 			baseConfigurationReference = 0AF82F1311F1CCDDE13C94A3 /* Pods-Photos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GQAPG2Q6U6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Photos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teddytab.Photos;
@@ -675,7 +674,7 @@
 			baseConfigurationReference = 8BB4D40C56E89EB77AAFA705 /* Pods-Photos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GQAPG2Q6U6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Photos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.teddytab.Photos;
