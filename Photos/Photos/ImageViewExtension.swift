@@ -22,7 +22,7 @@ extension UIImageView {
                 return
             }
             completion(NSData(data: data!))
-            }.resume()
+        }.resume()
     }
     
     func downloadImage(url:String){

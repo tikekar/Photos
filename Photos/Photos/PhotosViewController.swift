@@ -19,11 +19,28 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         setUpURLCache()
         
+        // checkInternet()
+        
         tableView.keyboardDismissMode =  UIScrollViewKeyboardDismissMode.onDrag
         
         allPhotos = Photo.fetchImages()!
         loadPhotos()
         
+    }
+    
+    func checkInternet() {
+        URLSession.shared.dataTask(with: URL(string: "https://www.google.com")!) { (data, response, error) in
+            
+            if let err = error {
+                // print(err)
+                let message = err.localizedDescription
+                let alertController = UIAlertController.init(title: "", message: message, preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction.init(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        }.resume()
+
     }
     
     // Setting up the URLCache with higher memory and disk capacity for smoother image loading and caching
